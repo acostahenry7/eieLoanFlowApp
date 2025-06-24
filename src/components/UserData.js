@@ -128,7 +128,7 @@ export default function UserData(props) {
                 icon={'alt-route'}
                 /> */}
       </View>
-      <View style={{ marginTop: 20 }}>
+      {/* <View style={{ marginTop: 20 }}>
         <Text style={styles.menuDivisionTitle}>Sincronización de Datos</Text>
         <UserDataMenuItem
           field={"Obtener datos desde el servidor"}
@@ -148,7 +148,7 @@ export default function UserData(props) {
           }}
           icon={"cloud-upload"}
         />
-      </View>
+      </View> */}
       <TouchableOpacity onPress={logout}>
         <Text
           style={{

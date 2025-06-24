@@ -11,6 +11,11 @@ const Stack = createStackNavigator();
 export default function CustomerNavigation(props) {
   const navigation = useNavigation();
 
+  // navigation.reset({
+  //   index: 0,
+  //   routes: [{ name: "Customers" }],
+  // });
+
   return (
     <Stack.Navigator
       initialRouteName="Customers"

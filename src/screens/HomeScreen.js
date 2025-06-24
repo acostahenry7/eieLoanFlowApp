@@ -332,7 +332,7 @@ export default function HomeScreen(props) {
           animationType={"fade"}
           transparent={true}
         >
-          <View style={{ height: "100%", backgroundColor: "rgba(0,0,0,1)" }}>
+          <View style={{ height: "100%", backgroundColor: "rgba(0,0,0,0.1)" }}>
             <View
               style={{
                 ...styles.modalContainer,
@@ -368,6 +368,7 @@ export default function HomeScreen(props) {
                       marginTop: 5,
                       borderRadius: 5,
                       paddingHorizontal: 3,
+                      width: "100%",
                     }}
                   />
                 </View>
@@ -416,7 +417,7 @@ export default function HomeScreen(props) {
               </Text>
               <View>
                 <TextInput
-                  style={{ ...styles.textInput }}
+                  style={{ ...styles.textInput, width: "100%" }}
                   placeholder="Busca un cliente"
                   value={cSearchStatus}
                   onChangeText={(text) => {
@@ -913,11 +914,19 @@ export default function HomeScreen(props) {
               paddingHorizontal: 15,
             }}
           >
-            <View style={{ flexDirection: "row" }}>
+            <View
+              style={{
+                flexDirection: "row",
+                display: "flex",
+                justifyContent: "center",
+                width: "100%",
+              }}
+            >
               <FadeInOut visible={searchCollector} duration={300}>
                 <TextInput
                   style={{
                     ...styles.textInput,
+                    width: 260,
                     backgroundColor: "rgba(255,255,255,0.5)",
                   }}
                   onChangeText={(text) => {

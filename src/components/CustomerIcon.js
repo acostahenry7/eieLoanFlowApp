@@ -20,7 +20,7 @@ export default function CustomerIcon(props) {
         <Image
           style={{ width: size, height: size, borderRadius: 100 }}
           source={{
-            uri: uri,
+            uri: uri || "",
           }}
         />
       ) : (

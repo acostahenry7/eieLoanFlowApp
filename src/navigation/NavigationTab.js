@@ -66,8 +66,27 @@ export default function NavigationTab() {
             tabBarIcon: ({ color, size }) => (
               <Icon name="users" color={color} size={size} />
             ),
-            unmountOnBlur: true,
+
+            //unmountOnBlur: true,
           }}
+          listeners={({ navigation }) => ({
+            tabPress: (e) => {
+              // const state = navigation.getState();
+              // const stack = state.routes.find(
+              //   (r) => r.name === "Customersnav"
+              // )?.state;
+
+              // console.log(stack);
+
+              // If not on initial route, reset stack
+              //if (stack && stack.index > 0) {
+              e.preventDefault();
+              navigation.navigate("Customersnav", {
+                screen: "Customers",
+              });
+              //}
+            },
+          })}
         />
       ) : undefined}
 

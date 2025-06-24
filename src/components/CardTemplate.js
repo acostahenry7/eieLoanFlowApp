@@ -60,9 +60,16 @@ export default function CardTemplate(props) {
         <View style={styles.cardContainer}>
           <TouchableNativeFeedback
             onPress={() => {
-              navigation.navigate("Customers", {
-                screen: "Customer",
-                params: { id: uid },
+              // navigation.navigate("Customersnav", {
+              //   screen: "Customer",
+              //   params: { id: uid },
+              // });
+              navigation.navigate("PaymentsRoot", {
+                screen: "Payments",
+                params: {
+                  loanNumber: data.loan_number_id,
+                  origin: "customerInfo",
+                },
               });
             }}
           >
@@ -80,7 +87,9 @@ export default function CardTemplate(props) {
               >
                 <View>
                   {/* <Text style={styles.title}>{mainTitle}</Text> */}
-                  <Text style={styles.mainText}>{formatText(mainText)}</Text>
+                  <Text style={styles.mainText}>
+                    {formatText(mainText)} ({data.loan_number_id})
+                  </Text>
                 </View>
                 <View style={{}}>
                   {/* <Text style={styles.title}>{secondaryTitle}</Text> */}

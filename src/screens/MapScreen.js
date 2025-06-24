@@ -172,7 +172,7 @@ const MapScreen = (props) => {
                               : "white",
                           marginVertical: 5,
                           elevation: 4,
-                          width: windowDimensions.width <= 393 ? 176 : 185,
+                          width: windowDimensions.width <= 393 ? 160 : 185,
                           height: 110,
                           position: "relative",
                           alignItems: "center",

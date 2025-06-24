@@ -211,6 +211,8 @@ export default function PaymentScreen(props) {
         employeeId: auth.employee_id,
       });
 
+      console.log("LOANS RESULT", response);
+
       if (!isEmpty(response)) {
         setIsCustomer(true);
         //console.log("mannnnnn, the charges again", response.charges);
